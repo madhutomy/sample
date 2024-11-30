@@ -1,0 +1,11 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="emailGreetingService" class="com.sample.services.EmailService" />
+
+    <bean id="greetingController" class="com.sample.controller.GreetingController">
+        <constructor-arg ref="emailGreetingService" />
+    </bean>
+</beans>
